@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>setlist-app</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    </head>
+    <body>
+        
+        <div class="layout">
+
+            <aside class="sidebar-left">
+                <div id="albums"></div>
+                <div id="album"></div>
+            </aside>
+
+            <main class="center">
+                
+                <div class="tituloSetlistActual">
+                    <h1 id="setlistActualNombre"></h1>
+                    <h2 id="setlistActualInfo"></h2>
+                </div>
+                <div class="botonesSetlistActual">
+                    <div class="botonPdf">
+                        <p>Descargar PDF</p>
+                    </div>
+                    <div class="botonBorrarSetlistActual" id="botonBorrarSetlistActual" onclick="deleteSetlist(state.currentSetlistId)">
+                        <img src="icons/x.svg">
+                    </div>
+                </div>
+
+                <div id="setlist"></div>
+
+            </main>
+
+            <aside class="sidebar-right">
+                <div class="botonCrearSetlist" id="botonCrearSetlist" onclick="createSetlist()">
+                    <img src="icons/+.svg">
+                </div>
+                <div id="savedSetlists">
+                </div>
+            </aside>
+
+        </div>
+
+    </body>
+
+    <script src="js/sortable.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/render.js"></script>
+    <script src="js/main.js"></script>
+    
+</html>

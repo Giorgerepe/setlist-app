@@ -1,0 +1,240 @@
+{
+    "albums": [
+        {
+            "id" : "mdb",
+            "name" : "Memorias del Bosque",
+            "year" : 2016,
+            "songs" : [
+                {
+                    "id" : "mdb01",
+                    "trackNumber" : 1,
+                    "name" : "Angua",
+                    "duration" : 312
+                },
+                {
+                    "id" : "mdb02",
+                    "trackNumber" : 2,
+                    "name" : "Pueblo Celta",
+                    "duration" : 247
+                },
+                {
+                    "id" : "mdb03",
+                    "trackNumber" : 3,
+                    "name" : "Último Aliento",
+                    "duration" : 365
+                },
+                {
+                    "id" : "mdb04",
+                    "trackNumber" : 4,
+                    "name" : "La Llegada de Krampus",
+                    "duration" : 381
+                },
+                {
+                    "id" : "mdb05",
+                    "trackNumber" : 5,
+                    "name" : "Río de Niebla",
+                    "duration" : 262
+                },
+                {
+                    "id" : "mdb06",
+                    "trackNumber" : 6,
+                    "name" : "Folkyria",
+                    "duration" : 377
+                },
+                {
+                    "id" : "mdb07",
+                    "trackNumber" : 7,
+                    "name" : "La Leyenda de Santana-Primera Parte",
+                    "duration" : 329
+                }
+            ]
+
+        },
+        {
+            "id" : "madlt",
+            "name" : "Más Allá de la Tempestad",
+            "year" : 2019,
+            "songs" : [
+                {
+                    "id" : "madlt01",
+                    "trackNumber" : 1,
+                    "name" : "El Alma del Viento",
+                    "duration" : 109
+                },
+                {
+                    "id" : "madlt02",
+                    "trackNumber" : 2,
+                    "name" : "El Aprendiz",
+                    "duration" : 295
+                },
+                {
+                    "id" : "madlt03",
+                    "trackNumber" : 3,
+                    "name" : "La Travesía del Navegante",
+                    "duration" : 383
+                },
+                {
+                    "id" : "madlt04",
+                    "trackNumber" : 4,
+                    "name" : "Alza la Vista",
+                    "duration" : 294
+                },
+                {
+                    "id" : "madlt05",
+                    "trackNumber" : 5,
+                    "name" : "Valor",
+                    "duration" : 245
+                },
+                {
+                    "id" : "madlt06",
+                    "trackNumber" : 6,
+                    "name" : "El Laberinto Mágico",
+                    "duration" : 291
+                },
+                {
+                    "id" : "madlt07",
+                    "trackNumber" : 7,
+                    "name" : "Viriato",
+                    "duration" : 383
+                },
+                {
+                    "id" : "madlt08",
+                    "trackNumber" : 8,
+                    "name" : "Rutas Misteriosas",
+                    "duration" : 198
+                },
+                {
+                    "id" : "madlt09",
+                    "trackNumber" : 9,
+                    "name" : "La Danza de los Muertos",
+                    "duration" : 228
+                },
+                {
+                    "id" : "madlt10",
+                    "trackNumber" : 10,
+                    "name" : "El Árbol Dormido",
+                    "duration" : 264
+                },
+                {
+                    "id" : "madlt11",
+                    "trackNumber" : 11,
+                    "name" : "El Capitán del Agua Triste",
+                    "duration" : 273
+                },
+                {
+                    "id" : "madlt12",
+                    "trackNumber" : 12,
+                    "name" : "Más Allá de la Tempestad",
+                    "duration" : 340
+                },
+                {
+                    "id" : "madlt13",
+                    "trackNumber" : 13,
+                    "name" : "El Cuento de la Oscuridad",
+                    "duration" : 511
+                }
+            ]
+        },
+        {
+            "id" : "esl",
+            "name" : "Estrella sin Luz",
+            "year" : 2021,
+            "songs" : [
+                {
+                    "id" : "esl01",
+                    "trackNumber" : 1,
+                    "name" : "Estrella sin Luz",
+                    "duration" : 324
+                }
+            ]
+
+        },
+        {
+            "id" : "cjalh",
+            "name" : "Cuentos Junto a la Hoguera",
+            "year" : 2023,
+            "songs" : [
+                {
+                    "id" : "cjalh01",
+                    "trackNumber" : 1,
+                    "name" : "Ekyrian",
+                    "duration" : 275
+                },
+                {
+                    "id" : "cjalh02",
+                    "trackNumber" : 2,
+                    "name" : "La Balada de Wilfred el Enano",
+                    "duration" : 298
+                },
+                {
+                    "id" : "cjalh03",
+                    "trackNumber" : 3,
+                    "name" : "Kaguya",
+                    "duration" : 388
+                },
+                {
+                    "id" : "cjalh04",
+                    "trackNumber" : 4,
+                    "name" : "Ítaca",
+                    "duration" : 292
+                },
+                {
+                    "id" : "cjalh05",
+                    "trackNumber" : 5,
+                    "name" : "El Peregrino de las Estrellas",
+                    "duration" : 372
+                },
+                {
+                    "id" : "cjalh06",
+                    "trackNumber" : 6,
+                    "name" : "El Rey Blanco",
+                    "duration" : 329
+                },
+                {
+                    "id" : "cjalh07",
+                    "trackNumber" : 7,
+                    "name" : "El Templo del Mar",
+                    "duration" : 329
+                },
+                {
+                    "id" : "cjalh08",
+                    "trackNumber" : 8,
+                    "name" : "Entre Fuego y Estrellas",
+                    "duration" : 225
+                },
+                {
+                    "id" : "cjalh09",
+                    "trackNumber" : 9,
+                    "name" : "Alas de Madera",
+                    "duration" : 373
+                },
+                {
+                    "id" : "cjalh10",
+                    "trackNumber" : 10,
+                    "name" : "El Alquimista",
+                    "duration" : 265
+                },
+                {
+                    "id" : "cjalh11",
+                    "trackNumber" : 11,
+                    "name" : "Volverte a Soñar",
+                    "duration" : 248
+                }
+            ]
+        },
+        {
+            "id" : "ceev",
+            "name" : "Colores en el Viento",
+            "year" : 2024,
+            "songs" : [
+                {
+                    "id" : "ceev01",
+                    "trackNumber" : 1,
+                    "name" : "Colores en el Viento",
+                    "duration" : 181
+                }
+            ]
+
+        }
+    ]
+}

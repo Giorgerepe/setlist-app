@@ -1,0 +1,494 @@
+html {
+    font-size: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    background-clip: padding-box; /* evita que el gradiente llene la pista de la scrollbar */
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    line-height: 1.5;
+    color: white;
+    background: linear-gradient(to bottom, rgba(24, 24, 39, 1) 0%,rgba(11, 11, 18, 1) 100%);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Scrollbar */
+
+/* Scrollbar: Chrome, Edge, Safari (tanto viewport como elementos) */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+width: 10px;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track,
+*::-webkit-scrollbar-track {
+background: transparent;
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb,
+*::-webkit-scrollbar-thumb {
+background-color: #1d1d29FF;
+border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover,
+*::-webkit-scrollbar-thumb:hover {
+background-color: #323143FF;
+}
+
+/* Scrollbar Firefox */
+html,
+body,
+* {
+scrollbar-width: 10px; /* tamaño fino */
+scrollbar-color: #1d1d29FF transparent; /* thumb / track */
+}
+
+/*  Fin scrollbar */
+
+.layout {
+    display: grid;
+    grid-template-columns:
+        640px /* sidebar-left */
+        minmax(484px, 1fr) /* center */
+        474px; /* sidebar-right */
+    column-gap: 8px;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.sidebar-left, .center, .sidebar-right {
+
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    
+    scrollbar-gutter: stable;
+}
+.sidebar-left{
+    padding-left: 20px;
+}
+.sidebar-right {
+    padding-right: 200px;
+}
+
+
+/* Elementos reactive */
+@media (max-width: 1500px) {
+    .sidebar-right {
+        display: none;
+    }
+    .layout {
+    grid-template-columns:
+        635px
+        minmax(484px, 1fr);
+}
+}
+
+@media (max-width: 700px) {
+    .sidebar-left {
+        display: none;
+    }
+    .layout {
+    grid-template-columns:
+        minmax(484px, 1fr);
+}
+}
+
+
+#setlist {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tituloSetlistActual {
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+.tituloSetlistActual h1 {
+    width: fit-content;
+    height: auto;
+
+    border: solid transparent;;
+    border-radius: 10px;
+
+    padding: 0px 10px 0px 10px;
+
+    margin:auto;
+
+    text-align: center;
+    font-size: 1.88;
+    font-weight: 400;
+}
+
+.tituloSetlistActual h1:hover {
+    border: solid #1d1d29FF;;
+    border-radius: 10px;
+    transition: 0.2s;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.tituloSetlistActual h1[contenteditable="true"] {
+    outline: none;
+    background: #1d1d29FF;
+}
+
+.tituloSetlistActual h2 {
+    margin-top: 10px;
+
+    text-align: center;
+    font-size: 1.25;
+    font-weight: normal;
+}
+
+/* Botones del Center */
+.botonesSetlistActual {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    margin-bottom: 25px;
+}
+.botonPdf {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 190px;
+    height: 44px;
+    border-radius: 10px;
+
+    background: #1d1d29FF;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+
+    cursor: pointer;
+}
+.botonPdf p{
+    font-size: 1.25rem;
+}
+
+.botonPdf:hover{
+    background-color: #323143FF;
+    transition: 0.2s;
+}
+
+.botonBorrarSetlistActual {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: auto;
+
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+
+    background: #1d1d29FF;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+
+    cursor: pointer;
+}
+
+.botonBorrarSetlistActual:hover{
+    background-color: #323143FF;
+    transition: 0.2s;
+}
+
+
+/* Cancion Setlist Actual        
+    <div class="songSetlist">
+                        <img src="img/Cuentos.png" alt="portada Cuentos Junto a la hoguera">
+                        <div>
+                            <p>Ekyrian<br>4:25</p>
+                        </div>
+                        <div class="trackId">
+                            <span>1</span>
+                        </div>
+    </div>
+*/
+.songSetlist-card{
+    height: 60px;
+    width: 1fr;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    background: #1d1d29FF;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    cursor: grab;
+}
+.songSetlist-card:hover{
+    background-color: #323143FF;
+    transition: 0.2s;
+    
+}
+.songSetlist-card img {
+    height: 60px;
+    width: 60px;
+    margin-left: 10px;
+    -webkit-user-drag: none;
+}
+.songSetlist-card div p {
+    margin-left: 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.trackId {
+    font-size: 1.3rem;
+    margin-right: 20px;
+    margin-left: auto;
+}
+
+
+/* Album */
+#albums {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.album-card {
+    height: auto;
+    width: 594px;
+    border-radius: 10px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: visible;
+
+    background: #1d1d29FF;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: relative;
+
+    cursor: pointer;
+}
+.album-card:hover{
+    background-color: #323143FF;
+    transition: 0.2s;
+}
+.album-header {
+    display: flex;
+    align-items: center;
+}
+.albumCover{
+    height: 119px;
+    width: 119px;
+}
+.album-header div p span{
+    font-size: 1.56rem;
+}
+.album-header div p{
+    margin:0;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    margin-left: 20px;
+}
+.albumIcon{
+    position: absolute;
+    top: 94px;
+    right: 30px;
+}
+
+/* Cada cancion dentro del album */
+.album-songs {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.album-songs.open {
+    max-height: 1000px;
+    opacity: 1;
+}
+
+.album-song{
+    height: 43px;
+    width: 574px;
+    border-radius: 10px;
+
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+ }
+
+.album-songs.open .album-song {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.album-song-selected{
+    background: #525164FF;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+ }
+
+.album-song:hover{
+    background: #525164FF;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    transition: 0.2s;
+}
+
+.album-song span{
+    font-size: 1rem;
+}
+
+.album-song span:nth-of-type(1) {
+    margin-left: 20px;
+    width: 35px;
+}
+
+.album-song span:nth-of-type(2) {
+    flex: 1;
+    margin-left: 0;
+    text-align: left;
+}
+
+.album-song span:nth-of-type(3) {
+    flex: 0;
+    margin-left: 0;
+    
+}
+
+.album-song img{
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Elemento saved-setlist */
+#savedSetlists {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Boton añadir setlist*/
+.botonCrearSetlist {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    border-radius: 10px;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    background: #1d1d29FF;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+
+    cursor: pointer;
+
+    padding: 0px;
+    margin-bottom: 20px;
+}
+
+.botonCrearSetlist:hover{
+    background-color: #323143FF;
+    transition: 0.2s;
+}
+
+/* Elementos saved-seltist */
+.saved-setlist {
+    width: 434px;
+    height: 131px;
+    border-radius: 10px;
+
+    background: #1d1d29FF;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    padding-left: 20px;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: relative;
+
+    cursor: pointer;
+}
+
+.saved-setlist:hover {
+    background-color: #323143FF;
+    transition: 0.2s;
+}
+
+.saved-setlist div p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.saved-setlist.selected {
+    background-color: #323143FF;
+    transition: 0.2s;
+}
+
+.saved-setlist img {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.saved-setlist img:hover {
+    width: 24px;
+    height: 24px;
+    top: 18px;
+    right: 18px;
+    transition: 0.2s;
+}
+
+/* SortableJS */
+.ghost {
+  opacity: 0;
+}
