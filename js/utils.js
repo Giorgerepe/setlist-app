@@ -44,6 +44,66 @@ function syncAlbumSelections() {
   });
 }
 
+// Carga la imagen para que la pueda poner en el pdf
+async function loadImageAsBase64(url) {
+  const res = await fetch(url);
+  const blob = await res.blob();
+
+  return new Promise((resolve) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.readAsDataURL(blob);
+  });
+}
+
+// Exportacion en PDF
+async function exportSetlistToPDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    const setlist = state.savedSetlists.find(
+        s => s.id === state.currentSetlistId
+    );
+
+    if (!setlist) return;
+
+    let y = 5;
+    const pageWidth = doc.internal.pageSize.getWidth()/2;
+
+    // Foto
+    const foto = await loadImageAsBase64("img/ekyrian-logo.png");
+    doc.addImage(foto, (pageWidth+10)/2, y, 89, 40);
+    y += 55;
+
+    // Título
+    doc.setFont("times", "bold");
+    doc.setFontSize(40);
+    doc.text(setlist.name, pageWidth, y, {align: "center"});
+    y += 8;
+
+    // Info
+    doc.setFontSize(20);
+    doc.text(`${convertDuration(calculateDuration())} - ${setlist.songs.length} canciones`, pageWidth, y, {align: "center"});
+    y += 15;
+
+    // Lista de canciones
+    doc.setFontSize(30);
+
+    setlist.songs.forEach((song, index) => {
+        const text = `${index + 1}. ${song.name} (${convertDuration(song.duration)})`;
+        doc.text(text, pageWidth, y, {align: "center"});
+        y += 15;
+
+        // Salto de página automático
+        if (y > 280) {
+            doc.addPage();
+            y = 20;
+        }
+    });
+
+    // Descargar
+    doc.save(`${setlist.name || "setlist"}.pdf`);
+}
 
 // SortableJS
 let sortableSetlist = null;
