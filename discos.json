@@ -235,6 +235,87 @@
                 }
             ]
 
+        },
+        {
+            "id" : "c",
+            "name" : "Covers",
+            "year" : 2025,
+            "songs" : [
+                {
+                    "id" : "cye1",
+                    "trackNumber" : 1,
+                    "name" : "Noche de Halloween",
+                    "duration" : 256
+                },
+                {
+                    "id" : "cye2",
+                    "trackNumber" : 2,
+                    "name" : "El Atrapasueños",
+                    "duration" : 250
+                },
+                {
+                    "id" : "cye3",
+                    "trackNumber" : 3,
+                    "name" : "La Danza del Fuego",
+                    "duration" : 311
+                },
+                {
+                    "id" : "cye4",
+                    "trackNumber" : 1,
+                    "name" : "Soñando Contigo",
+                    "duration" : 263
+                },
+                {
+                    "id" : "cye5",
+                    "trackNumber" : 5,
+                    "name" : "La Batalla con los Cueros de Vino",
+                    "duration" : 308
+                },
+                {
+                    "id" : "cye6",
+                    "trackNumber" : 6,
+                    "name" : "Molinos de Viento",
+                    "duration" : 245
+                },
+                {
+                    "id" : "cye7",
+                    "trackNumber" : 7,
+                    "name" : "Morrison's Jig",
+                    "duration" : 177
+                },
+                {
+                    "id" : "cye8",
+                    "trackNumber" : 8,
+                    "name" : "Marinero Borracho",
+                    "duration" : 178
+                },
+                {
+                    "id" : "cye9",
+                    "trackNumber" : 9,
+                    "name" : "Saloma",
+                    "duration" : 222
+                },
+                {
+                    "id" : "cye10",
+                    "trackNumber" : 10,
+                    "name" : "Grogg Mayles",
+                    "duration" : 97
+                }
+            ]
+        },
+        {
+            "id" : "iye",
+            "name" : "Intros y Extras",
+            "year" : 2026,
+            "songs" : [
+                {
+                    "id" : "iye1",
+                    "trackNumber" : 1,
+                    "name" : "Intro Pirata",
+                    "duration" : 110
+                }
+            ]
+
         }
     ]
 }
