@@ -122,6 +122,11 @@ function initSetlistSortable() {
 
   sortableSetlist = new Sortable(setlistContainer, {
     animation: 150,
+
+    delay: 150,
+    delayOnTouchOnly: true,
+    touchStartThreshold: 5,
+    
     swapThreshold: 0.6,
     ghostClass: "ghost",
     forceFallback: true,
